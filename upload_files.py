@@ -11,15 +11,6 @@ Why this exists:
   Entra ID, and the SERVICE writes them to storage using its managed identity --
   the same server-side path that already works for index creation.
 
-Prereqs:
-  pip install azure-ai-projects azure-identity
-  az login            (as a user with 'Azure AI User' on the project, e.g. Ted or Samir)
-
-Run:
-  export FOUNDRY_PROJECT_ENDPOINT="https://ai-foundry-s50j.services.ai.azure.com/api/projects/aif-prj-dev-02"
-  # ^ grab the exact value from Foundry portal -> your project -> Overview -> "Project endpoint"
-  python upload_files.py --agent-id <asst_xxx>        # attach to Ted's existing agent
-  # ...or omit --agent-id to just create the vector store and print its id.
 
 Drop the files Ted needs indexed into the ./files folder next to this script.
 """
